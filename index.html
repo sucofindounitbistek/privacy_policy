@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi | IDSurvey</title>
+    <meta name="description" content="Halaman Kebijakan Privasi untuk layanan kami.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(at 40% 20%, hsla(228,100%,74%,0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-main);
+            letter-spacing: -0.025em;
+        }
+
+        /* Main Content Area */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #0f172a, #334155);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .policy-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .update-badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: #e0e7ff;
+            color: var(--primary);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .section p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        
+        .section ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .section ul li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .section ul li::before {
+            content: '•';
+            position: absolute;
+            left: -1.2rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .section p:last-child, .section ul:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .policy-container {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            main {
+                padding-top: 6rem;
+            }
+        }
+        
+        /* Dark Mode Support based on system preference */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --card-bg: rgba(30, 41, 59, 0.7);
+                --border-color: #334155;
+            }
+            
+            body {
+                background-image: 
+                    radial-gradient(at 40% 20%, hsla(228,100%,74%,0.05) 0px, transparent 50%),
+                    radial-gradient(at 80% 0%, hsla(189,100%,56%,0.05) 0px, transparent 50%),
+                    radial-gradient(at 0% 50%, hsla(355,100%,93%,0.05) 0px, transparent 50%);
+            }
+            
+            header {
+                background: rgba(15, 23, 42, 0.7);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .hero h2 {
+                background: linear-gradient(to right, #f8fafc, #cbd5e1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
+            .policy-container {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .update-badge {
+                background: rgba(37, 99, 235, 0.2);
+                color: #60a5fa;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-icon">ID</div>
+            <h1>Kebijakan Privasi</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Komitmen Privasi Kami</h2>
+            <p>Kami sangat menghargai privasi Anda. Dokumen ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.</p>
+        </div>
+
+        <div class="policy-container">
+            <div class="update-badge">Terakhir diperbarui: 14 Juli 2026</div>
+            
+            <div class="section">
+                <h3>1. Informasi yang Kami Kumpulkan</h3>
+                <p>Kami mengumpulkan beberapa informasi dasar saat Anda menggunakan layanan kami untuk memberikan pengalaman terbaik:</p>
+                <ul>
+                    <li><strong>Informasi Profil:</strong> Nama, alamat email, dan nomor telepon saat pendaftaran.</li>
+                    <li><strong>Data Penggunaan:</strong> Informasi tentang bagaimana Anda berinteraksi dengan aplikasi dan layanan kami.</li>
+                    <li><strong>Informasi Perangkat:</strong> Model perangkat keras, sistem operasi, dan alamat IP.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>2. Bagaimana Kami Menggunakan Informasi</h3>
+                <p>Informasi yang kami kumpulkan digunakan untuk tujuan berikut:</p>
+                <ul>
+                    <li>Menyediakan, memelihara, dan meningkatkan layanan kami.</li>
+                    <li>Memproses transaksi dan mengirimkan pemberitahuan terkait layanan.</li>
+                    <li>Mendeteksi, mencegah, dan menangani masalah teknis atau keamanan.</li>
+                    <li>Merespons pertanyaan dan memberikan dukungan pelanggan.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>3. Berbagi Informasi Anda</h3>
+                <p>Kami tidak akan menjual informasi pribadi Anda kepada pihak ketiga. Kami hanya membagikan informasi dalam kondisi tertentu:</p>
+                <ul>
+                    <li>Dengan penyedia layanan pihak ketiga yang membantu kami mengoperasikan bisnis kami, di bawah perjanjian kerahasiaan.</li>
+                    <li>Jika diwajibkan oleh hukum, panggilan pengadilan, atau proses hukum lainnya.</li>
+                    <li>Untuk melindungi hak, properti, atau keselamatan pengguna kami atau publik.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>4. Keamanan Data</h3>
+                <p>Kami menerapkan langkah-langkah keamanan teknis dan organisasi yang ketat untuk melindungi informasi pribadi Anda dari akses yang tidak sah, kehilangan, atau kerusakan. Meskipun demikian, perlu diingat bahwa tidak ada metode transmisi di internet atau penyimpanan elektronik yang 100% aman.</p>
+            </div>
+
+            <div class="section">
+                <h3>5. Hak-Hak Anda</h3>
+                <p>Anda memiliki hak untuk mengakses, memperbarui, atau menghapus informasi pribadi Anda yang ada di sistem kami. Jika Anda ingin menggunakan hak ini, silakan hubungi tim dukungan kami melalui kontak yang tersedia.</p>
+            </div>
+
+            <div class="section">
+                <h3>6. Perubahan Kebijakan</h3>
+                <p>Kami dapat memperbarui kebijakan privasi ini dari waktu ke waktu. Setiap perubahan akan diberitahukan melalui pembaruan di halaman ini dengan tanggal revisi terbaru.</p>
+            </div>
+            
+            <div class="section">
+                <h3>7. Hubungi Kami</h3>
+                <p>Jika Anda memiliki pertanyaan atau kekhawatiran tentang kebijakan privasi ini, silakan hubungi kami di <strong>support@idsurvey.id</strong>.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 IDSurvey. Hak Cipta Dilindungi Undang-Undang.
+    </footer>
+
+    <script>
+        // Smooth header shadow effect on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.8)';
+            } else {
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
+                header.style.background = 'rgba(255, 255, 255, 0.6)';
+            }
+        });
+        
+        // Ensure dark mode handles header correctly
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.style.background = 'rgba(15, 23, 42, 0.85)';
+                } else {
+                    header.style.background = 'rgba(15, 23, 42, 0.7)';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
